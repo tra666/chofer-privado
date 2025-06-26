@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chofer Privado - Rony</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -70,6 +71,32 @@
       font-size: 18px;
       text-decoration: none;
     }
+    iframe {
+      border: 0;
+      border-radius: 12px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
     footer {
       background-color: #111;
       color: #aaa;
@@ -86,7 +113,7 @@
     <a href="index-en.html">🇺🇸 English</a>
   </div>
 
-  <header>
+  <header data-aos="fade-down">
     <h1>Servicio de Chofer Privado</h1>
     <p>Con auto propio, puntualidad y atención personalizada</p>
   </header>
@@ -97,15 +124,14 @@
     <a href="#contacto">Contacto</a>
   </nav>
 
-  <div class="container gallery">
+  <div class="container gallery" data-aos="fade-up">
     <img src="assets/auto.jpg" alt="Auto del chofer">
     <p><em>Mi vehículo: cómodo, limpio y seguro</em></p>
-
-    <img src="assets/ronal.jpg" alt="Foto de Ronal" style="max-width: 300px;">
+    <img src="assets/ronal.jpg" alt="Foto de Ronal" style="max-width:300px;">
     <p><em>Tu chofer de confianza</em></p>
   </div>
 
-  <div class="container" id="servicios">
+  <div class="container" id="servicios" data-aos="fade-up">
     <h2>🚗 Servicios</h2>
     <ul>
       <li>Traslados ejecutivos</li>
@@ -116,7 +142,7 @@
     </ul>
   </div>
 
-  <div class="container" id="por-que">
+  <div class="container" id="por-que" data-aos="fade-up">
     <h2>🌟 ¿Por qué elegirme?</h2>
     <ul>
       <li>Auto moderno y limpio</li>
@@ -126,18 +152,34 @@
     </ul>
   </div>
 
-  <div class="container" id="contacto">
+  <div class="container" id="ubicacion" data-aos="fade-up">
+    <h2>📍 Zona de cobertura</h2>
+    <iframe src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed" width="100%" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div class="container" id="contacto" data-aos="fade-up">
     <h2>📞 Contacto</h2>
     <p>Reservá tu viaje por WhatsApp:</p>
     <a class="whatsapp-button" href="https://wa.me/+5491168221174" target="_blank">Enviar mensaje</a>
-    <p>Correo: tuemail@example.com<br>
-       Cobertura: CABA y zonas cercanas
-    </p>
+    <p>Correo: tuemail@example.com</p>
+
+    <h3 style="margin-top: 40px;">📬 Consultas por email</h3>
+    <form action="https://formsubmit.co/tuemail@example.com" method="POST">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="4" placeholder="Escribí tu consulta..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </div>
 
   <footer>
     &copy; 2025 Rony | Chofer Privado
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
