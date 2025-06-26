@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith("es")) {
+      window.location.href = "index-es.html";
+    } else {
+      window.location.href = "index-en.html";
+    }
+  </script>
+  <title>Redireccionando...</title>
+</head>
+<body>
+  <p>Redireccionando a tu idioma preferido...</p>
+</body>
+</html>
